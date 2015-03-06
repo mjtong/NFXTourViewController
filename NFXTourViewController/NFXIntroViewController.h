@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface NFXIntroViewController : UIViewController
--(id)initWithViews:(NSArray*)images;
+-(id)initWithViews:(NSArray*)images withTitles:(NSArray *)titles withCaptions:(NSArray *)captions;
 @end
