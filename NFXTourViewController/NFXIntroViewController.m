@@ -124,7 +124,7 @@
 #if CTM_OLD
         _tourTitle.textAlignment = UITextAlignmentCenter;
 #else
-        _tourTitle.textAligntment = NSTextAlignmentCenter;
+        _tourTitle.textAlignment = NSTextAlignmentCenter;
 #endif
         _tourTitle.text = TITLE_TOUR;
         [_tourTitle setFont:[UIFont boldSystemFontOfSize:16]];
