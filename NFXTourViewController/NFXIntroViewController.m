@@ -121,7 +121,11 @@
         [self.view addSubview:_button];
         
         _tourTitle = [[UILabel alloc]initWithFrame:CGRectMake(0, _scrollview.frame.origin.y-30, self.view.frame.size.width, 30)];
+#if CTM_OLD
         _tourTitle.textAlignment = UITextAlignmentCenter;
+#else
+        _tourTitle.textAligntment = NSTextAlignmentCenter;
+#endif
         _tourTitle.text = TITLE_TOUR;
         [_tourTitle setFont:[UIFont boldSystemFontOfSize:16]];
         [self.view addSubview:_tourTitle];
@@ -141,12 +145,20 @@
             title.text = _titles[i];
 //            title.backgroundColor = [UIColor purpleColor];
             [title setFont:[UIFont boldSystemFontOfSize:16]];
+#if CTM_OLD
             title.textAlignment = UITextAlignmentCenter;
+#else
+            title.textAlignment = NSTextAlignmentCenter;
+#endif
             
             
             UITextView *caption = [[UITextView alloc] initWithFrame:CGRectMake(_scrollview.bounds.size.width * index_, _scrollview.bounds.size.height/2 + 30, _scrollview.bounds.size.width, 90)];
             caption.text = _captions[i];
+#if CTM_OLD
             caption.textAlignment = UITextAlignmentCenter;
+#else
+            caption.textAlignment = NSTextAlignmentCenter;
+#endif
             caption.font = [UIFont systemFontOfSize:14];
             [_scrollview addSubview:iv_];
             [_scrollview addSubview:title];
