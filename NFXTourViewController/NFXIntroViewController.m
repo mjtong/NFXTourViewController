@@ -27,8 +27,7 @@
 @implementation NFXIntroViewController
 
 -(id)initWithViews:(NSArray*)images withTitles:(NSArray *)titles withCaptions:(NSArray *)captions{
-    self = [super init];
-    if (self) {
+    if (self = [super initWithNibName:nil bundle:nil]) {
         //check views length
         NSAssert(images.count!=0, @".views's length is zero.");
         if([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]){
